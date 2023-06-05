@@ -60,14 +60,38 @@ class Person {
     }
 }
 
-const person1 = new Person("Timmy");
-person1.ageUp(5);
-person1.eat(5);
-person1.exercise(5);
-person1.ageUp(9);
-const hamster1 = new Hamster("Gus");
-person1.buyHamster(hamster1);
-person1.ageUp(15);
-person1.eat(2);
-person1.exercise(2);
-console.log(person1);
+// const person1 = new Person("Timmy");
+// person1.ageUp(5);
+// person1.eat(5);
+// person1.exercise(5);
+// person1.ageUp(9);
+// const hamster1 = new Hamster("Gus");
+// person1.buyHamster(hamster1);
+// person1.ageUp(15);
+// person1.eat(2);
+// person1.exercise(2);
+// console.log(person1);
+
+class Dinner {
+    constructor(appetizer, entree, dessert) {
+        this.appetizer = appetizer;
+        this.entree = entree;
+        this.dessert = dessert;
+    }
+}
+
+class Chef {
+    cook(appetizer, entree, dessert) {
+        return new Dinner(appetizer, entree, dessert);
+    }
+}
+
+const dinners = [];
+const chef1 = new Chef();
+dinners.push(chef1.cook("sausage", "pancakes", "cheesecake"));
+dinners.push(chef1.cook("light salad", "big salad", "dessert salad"));
+dinners.push(chef1.cook("water", "a slice of bread", "nothing"));
+
+for(dinner of dinners) {
+    console.log("For dinner I had " + dinner.appetizer + ", " + dinner.entree + ", and " + dinner.dessert);
+}
