@@ -60,17 +60,17 @@ class Person {
     }
 }
 
-// const person1 = new Person("Timmy");
-// person1.ageUp(5);
-// person1.eat(5);
-// person1.exercise(5);
-// person1.ageUp(9);
-// const hamster1 = new Hamster("Gus");
-// person1.buyHamster(hamster1);
-// person1.ageUp(15);
-// person1.eat(2);
-// person1.exercise(2);
-// console.log(person1);
+const person1 = new Person("Timmy");
+person1.ageUp(5);
+person1.eat(5);
+person1.exercise(5);
+person1.ageUp(9);
+const hamster1 = new Hamster("Gus");
+person1.buyHamster(hamster1);
+person1.ageUp(15);
+person1.eat(2);
+person1.exercise(2);
+console.log(person1);
 
 class Dinner {
     constructor(appetizer, entree, dessert) {
